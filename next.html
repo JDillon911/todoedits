@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>About | Todo-Today</title>
+    <link rel="stylesheet" href="css/styleAbout.css">
+  </head>
+  <body>
+    <section id="todoapp">
+      <header id="header">
+        <h1>About</h1>
+        <input type="text" id="new-todo" placeholder="Todo MVC Application" />
+      </header>
+
+      <section id="main">
+        <ul id="todo-list">
+          <li>
+            <input type="checkbox" class="toggle">
+            <label>Created with Ember.js</label><button class="destroy"></button>
+          </li>
+          <li>
+            <input type="checkbox" class="toggle">
+            <label>By Todomvc</label><button class="destroy"></button>
+          </li>
+          <li>
+            <input type="checkbox" class="toggle">
+            <label>Find me on Facebook and Twitter below!</label><button class="destroy"></button>
+          </li>
+        </ul>
+
+        <input type="checkbox" id="toggle-all">
+      </section>
+
+      <footer id="footer">
+        <span id="todo-count">
+          <strong>1</strong> Todo left - Contact:
+        </span>
+        
+        <ul id="filters">
+          
+          <li>
+            <a href="mailto:jdillon911@gmail.com" class="selected">Email</a>
+          </li>
+          <li>
+            <a href="tel:555-6425" class="selected">Phone</a>
+          </li>
+          <li>
+            <a href="http://twitter.com/intent/tweet?screen_name=s0num" class="selected">@S0num</a>
+          </li>
+        </ul>
+
+        <button id="clear-completed">
+          <a href="index.html" class="link">Back to To-Do</a>
+        </button>
+      </footer>
+    </section>
+
+<!--
+    <footer>
+      <ul id="contactLinks">
+        <li>
+          <a href="mailto:jdillon911@gmail.com">Email</a>
+        </li>
+        <li>
+          <a href="tel:555-6425">Phone</a>
+        </li>
+        <li>
+          <a href="http://twitter.com/intent/tweet?screen_name=s0num">Tweet @S0num</a>
+        </li>
+      </ul>
+    </footer>
+-->
+    <script src="js/libs/jquery-1.11.2.min.js"></script>
+  <script src="js/libs/handlebars-v1.3.0.js"></script>
+  <script src="js/libs/ember.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  <script src="js/libs/localstorage_adapter.js"></script>
+<!-- ... Ember.js and other javascript dependencies ... -->
+  <script src="js/application.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/models/todo.js"></script>
+  <script src="js/controllers/todos_controller.js"></script>
+  <script src="js/controllers/todo_controller.js"></script>
+  <script src="js/views/edit_todo_view.js"></script>
+  <script src="js/additions.js"></script>
+  </body>
+</html>
