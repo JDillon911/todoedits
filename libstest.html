@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/2.1.0/normalize.css">
+  <link rel="stylesheet" href="css/stylelib.css">
+</head>
+<body>
+
+  <script type="text/x-handlebars">
+    <h2> Welcome to Ember.js</h2>
+    <div style="float:left">{{render "menu"}}</div>
+    <div style="float:left;margin-left:30%">{{outlet}}</div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="libraries/index">
+    <p>Please select a note from the sidebar</p>
+  </script>
+  <script type="text/x-handlebars" data-template-name="library/index">
+the library - {{name}}
+  </script>
+  <script type="text/x-handlebars" data-template-name="book/index">
+the book - {{name}}
+  </script>
+  <script type="text/x-handlebars" data-template-name="page">
+the page - {{name}}
+  </script>
+  
+  <script type="text/x-handlebars" data-template-name="menu">
+
+<div style="float:left">
+{{#each lib in libs}}
+{{#link-to "library" lib}}{{lib.name}}{{/link-to}}<br/>
+{{/each}}
+</div>
+<div style="float:left">
+{{#each book in books}}
+{{#link-to "book" book}}{{book.name}}{{/link-to}}<br/>
+{{/each}}
+</div>
+<div style="float:left">
+{{#each page in pages}}
+{{#link-to "page" page}}{{page.name}}{{/link-to}}<br/>
+{{/each}}
+</div>
+
+
+  </script>
+  <script src="js/libs/jquery-1.11.2.min.js"></script>
+  <script src="js/libs/handlebars-v1.3.0.js"></script>
+  <script src="js/libs/ember.js"></script>
+  <script src="js/libs/ember-data.js"></script>
+  <script src="js/libs.js"></script>
+</body>
+</html>

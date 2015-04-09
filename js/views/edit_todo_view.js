@@ -1,0 +1,15 @@
+Todos.EditTodoView = Ember.TextField.extend({
+  didInsertElement: function() {
+    this.$().focus();
+  }
+});
+
+Ember.Handlebars.helper('edit-todo', Todos.EditTodoView);
+
+Todos.EditTitleView = Ember.TextField.extend({
+  didInsertElement: function() {
+    this.$().focus();
+  }
+});
+
+Ember.Handlebars.helper('edit-title', Todos.EditTodoView);
